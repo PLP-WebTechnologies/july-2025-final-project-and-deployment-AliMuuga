@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="logo.png" type="image/png">
+  <title>Employee Payslip - Kenimay Engineering</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="logo.png" alt="Company Logo">
+    </div>
+    <div class="company-info">
+      <h1>KENIMAY ENGINEERING PTY LTD</h1>
+      <p>UNIT 13, 40 PLANTATION ROAD, EDENVALE</p>
+      <p>Email: kenimayengineering60@gmail.com | Cell: 072 796 9703</p>
+    </div>
+  </header>
+
+  <nav>
+    <button onclick="location.href='index.html'">Home</button>
+    <button onclick="location.href='Quotations.html'">Quotations</button>
+    <button onclick="location.href='Invoices.html'"> Invoices</button>
+  </nav>
+
+  <main class="payslip-container">
+    <!-- Payslip 1 -->
+    <div class="payslip">
+      <table>
+        <tr>
+          <td colspan="2"><strong>EMPLOYEE INFORMATION</strong></td>
+          <td colspan="2"><strong>OCCUPATION</strong></td>
+        </tr>
+        <tr>
+          <td>Name:</td>
+          <td><input type="text" class="emp-name" placeholder="Employee Name"></td>
+          <td><input type="text" placeholder="Job Title"></td>
+          <td>Date: <input type="date"></td>
+        </tr>
+        <tr>
+          <td>ID:</td>
+          <td><input type="text" placeholder="ID Number"></td>
+          <td colspan="2"></td>
+        </tr>
+      </table>
+
+      <h3>INCOME</h3>
+      <table>
+        <tr>
+          <th>Description</th>
+          <th>Hours Worked</th>
+          <th>Rate (R)</th>
+          <th>Amount (R)</th>
+        </tr>
+        <tr>
+          <td>Normal Time</td>
+          <td><input type="number" value="0" class="hours"></td>
+          <td><input type="number" value="45" class="rate"></td>
+          <td class="amount">0.00</td>
+        </tr>
+        <tr>
+          <td>Overtime (1)</td>
+          <td><input type="number" value="0" class="hours"></td>
+          <td><input type="number" value="60" class="rate"></td>
+          <td class="amount">0.00</td>
+        </tr>
+        <tr>
+           <tr>
+          <td>Overtime (2)</td>
+          <td><input type="number" value="0" class="hours"></td>
+          <td><input type="number" value="60" class="rate"></td>
+          <td class="amount">0.00</td>
+        </tr>
+        <tr>
+          <td>Call Out</td>
+          <td><input type="number" value="0" class="hours"></td>
+          <td><input type="number" value="100" class="rate"></td>
+          <td class="amount">0.00</td>
+        </tr>
+        <tr>
+          <td>Bonus</td>
+          <td colspan="2"><input type="number" value="0" class="bonus"></td>
+          <td class="bonus-amount">0.00</td>
+        </tr>
+        <tr>
+          <td colspan="3"><strong>Gross Earnings</strong></td>
+          <td class="gross">0.00</td>
+        </tr>
+      </table>
+
+      <h3>DEDUCTIONS</h3>
+      <table>
+        <tr><th>Description</th><th>Amount (R)</th></tr>
+        <tr><td>Site Tax</td><td><input type="number" value="0" class="deduction"></td></tr>
+        <tr><td>PAYE Tax</td><td><input type="number" value="0" class="deduction"></td></tr>
+        <tr><td>Other</td><td><input type="number" value="0" class="deduction"></td></tr>
+        <tr><td>Unpaid Leave</td><td><input type="number" value="0" class="deduction"></td></tr>
+        <tr><td><strong>Total Deductions</strong></td><td class="deductions-total">0.00</td></tr>
+        <tr><td><strong>Net Pay</strong></td><td class="net-pay">0.00</td></tr>
+      </table>
+
+      <h3>LEAVE BALANCES</h3>
+      <table>
+        <tr><th>Shifts Accrued</th><th>Leave Days</th><th>Family Responsibility Leave</th></tr>
+        <tr>
+          <td><input type="number"></td>
+          <td><input type="number"></td>
+          <td><input type="number"></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Payslip 2 (stacked below for printing 2 per page) -->
+    <div class="payslip">
+      <!-- identical structure as above -->
+    </div>
+  </main>
+
+  <div class="print-btn">
+    <button onclick="window.print()"> Print Payslips</button>
+  </div>
+  <section id="payslipHistory">
+  <h2>Payslip History</h2>
+  <div id="payslipHistoryList"></div>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
